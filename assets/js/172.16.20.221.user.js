@@ -40,7 +40,8 @@ if (typeof loadJS !== "undefined") {
 }
 
 // cdn.jsdelivr.net疑似被dns污染
-include('https://fastly.jsdelivr.net/npm/jspanel4@latest/dist/jspanel.js').then(async () => {
+// cdn.jsdelivr.net
+include('https://cdn.jsdelivr.net/npm/jspanel4@latest/dist/jspanel.js').then(async () => {
 	let urls = [
 		'extensions/modal/jspanel.modal.js',
 		'extensions/tooltip/jspanel.tooltip.js',
@@ -50,14 +51,14 @@ include('https://fastly.jsdelivr.net/npm/jspanel4@latest/dist/jspanel.js').then(
 		'extensions/dock/jspanel.dock.js'
 	];
 	await Promise.all(urls.map((e, i, a) => {
-		return include('https://fastly.jsdelivr.net/npm/jspanel4@latest/dist/' + e).then(console.log(e + ' has been loaded'));
+		return include('https://cdn.jsdelivr.net/npm/jspanel4@latest/dist/' + e).then(console.log(e + ' has been loaded'));
 	}));
 });
 
 loadJS([
-	'https://fastly.jsdelivr.net/npm/jspanel4@latest/dist/jspanel.css',
+	'https://cdn.jsdelivr.net/npm/jspanel4@latest/dist/jspanel.css',
 	'https://unpkg.com/css.gg/icons/all.css',
-	'https://fastly.jsdelivr.net/npm/css.gg/icons/css/info.css'
+	'https://cdn.jsdelivr.net/npm/css.gg/icons/css/info.css'
 ]);
 
 include(injectScript).then(function(){
