@@ -40,7 +40,7 @@ if (typeof loadJS !== "undefined") {
 }
 
 // cdn.jsdelivr.net疑似被dns污染
-// cdn.jsdelivr.net
+// fastly.jsdelivr.net
 include('https://cdn.jsdelivr.net/npm/jspanel4@latest/dist/jspanel.js').then(async () => {
 	let urls = [
 		'extensions/modal/jspanel.modal.js',
