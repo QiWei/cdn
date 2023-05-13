@@ -3,6 +3,8 @@
 // @namespace   Violentmonkey Scripts
 // @match       *://172.16.20.221:8085/front/*
 // @match       *://172.21.152.199:10003/front/*
+// @match       *://172.21.152.199:*/front/*
+// @match       *://172.17.42.153:*/front/*
 // @grant       none
 // @version     1.1
 // @author      QWCloud@outlook.com
